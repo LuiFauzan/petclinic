@@ -3,12 +3,25 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Petluy || Website</title>
+    <link rel="stylesheet" href="style/table.css">
+    <link rel="stylesheet" href="style/add.css">
+    <?php
+    include "utility/main.php";
+    ?>
 </head>
+
 <body>
-    <h1>Petluy</h1><hr>
-    <h3>Change Photo</h3>
+    <div class="header">
+        <a href="index.php">Home</a>
+        <h1>Petluy</h1>
+        <a href="index.php">Cancel</a>
+    </div>
+    <div class="header1">
+        <h3>Change Photo</h3>
+    </div>
     <?php
     include "connection_220082.php";
     $query = "SELECT * FROM user_220082 WHERE userid_220082='$_SESSION[userid]'";
@@ -19,7 +32,7 @@ session_start();
         <table>
             <tr>
                 <td>
-                <img src="uploads/users/<?=$data['photo_220082'];?>" alt="" width="100" height="100">
+                    <img src="uploads/users/<?= $data['photo_220082']; ?>" alt="" width="100" height="100">
                 </td>
             </tr>
             <tr>
@@ -30,12 +43,12 @@ session_start();
                 <td>&nbsp;</td>
                 <td>&nbsp;
                     <input type="submit" name="upload" value="UPLOAD">
-                    <input type="hidden" name="photo_220082" value="<?= $data['photo_220082']?>">
-                    <input type="hidden" name="userid_220082" value="<?= $data['userid_220082']?>">
+                    <input type="hidden" name="photo_220082" value="<?= $data['photo_220082'] ?>">
+                    <input type="hidden" name="userid_220082" value="<?= $data['userid_220082'] ?>">
                 </td>
             </tr>
             <table>
     </form>
-    <a href="index.php">CANCEL</a>
 </body>
+
 </html>

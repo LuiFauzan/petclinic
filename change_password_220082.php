@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>PetLuy || Website</title>
+    <link rel="stylesheet" href="style/add.css">
+    <?php
+    include "utility/main.php";
+    ?>
 </head>
+
 <body>
-    <h1>PetLuy</h1><hr>
-    <h3>Change your password</h3>
+    <div class="header">
+        <p><a href="index.php">Home</a></p>
+        <h1>PetLuy</h1>
+        <p><a href="index.php">Cancel</a></p>
+    </div>
+    <div class="header1">
+        <h3>Change your password</h3>
+    </div>
     <form method="post" action="update_password_220082.php">
         <table>
             <tr>
                 <td>New Password</td>
-                <td><input type="password" name="new_password_220082" id="new"required></td>
+                <td><input type="password" name="new_password_220082" id="new" required></td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
@@ -19,22 +31,22 @@
             <tr>
                 <td>&nbsp;</td>
                 <td>&nbsp;
-                <input type="submit" name="change" value="CHANGE">
-                <input type="reset" name="reset" value="RESET">
+                    <input class="btn" type="submit" name="change" value="CHANGE">
+                    <input class="btn" type="reset" name="reset" value="RESET">
                 </td>
             </tr>
             <table>
     </form>
-    <p><a href="index.php">CANCEL</a></p>
     <script>
-        function show(){
+        function show() {
             var x = document.getElementById("new");
-            if(x.type === "password"){
+            if (x.type === "password") {
                 x.type = 'text'
-            }else{
+            } else {
                 x.type = 'password'
             }
         }
     </script>
 </body>
+
 </html>

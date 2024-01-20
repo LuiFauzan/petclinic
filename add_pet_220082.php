@@ -1,17 +1,29 @@
 <?php
 session_start();
-if(!isset($_SESSION['login'])){
+if (!isset($_SESSION['login'])) {
     echo "<script>alert('Please Login First !'); window.location.replace('form_login_220082.php');</script>";
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>PetLuy || Website</title>
+    <link rel="stylesheet" href="style/add.css">
+    <?php
+    include "utility/main.php";
+    ?>
 </head>
+
 <body>
-    <h1>PetLuy</h1><hr>
-    <h3>Form Add Pet</h3>
+    <div class="header">
+        <p><a href="index.php">Home</a></p>
+        <h1>PetLuy</h1>
+        <p><a href="read_pet_220082.php">Cancel</a></p>
+    </div>
+    <div class="header1">
+        <h3>Add Your Pet</h3>
+    </div>
     <form method="post" action="create_pet_220082.php">
         <table>
             <tr>
@@ -28,7 +40,7 @@ if(!isset($_SESSION['login'])){
                         <option value="Reptil">Reptil</option>
                         <option value="Bird">Bird</option>
                     </select>
-                    </td>
+                </td>
 
             </tr>
             <tr>
@@ -45,8 +57,8 @@ if(!isset($_SESSION['login'])){
             <tr>
                 <td>food</td>
                 <td>
-                <input type="radio" name="pet_food_220082" value="Wet"required>Wet ||
-                <input type="radio" name="pet_food_220082" value="Dry"required>Dry
+                    <input type="radio" name="pet_food_220082" value="Wet" required>Wet ||
+                    <input type="radio" name="pet_food_220082" value="Dry" required>Dry
                 </td>
             </tr>
             <tr>
@@ -63,12 +75,12 @@ if(!isset($_SESSION['login'])){
             </tr>
             <tr>
                 <td></td>
-                <td><input type="submit" name="save" value="SAVE">
-                <input type="reset" name="reset" value="RESET">
-            </td>
+                <td><input class="btn" type="submit" name="save" value="SAVE">
+                    <input class="btn" type="reset" name="reset" value="RESET">
+                </td>
             </tr>
             <table>
     </form>
-    <p><a href="read_pet_220082.php">CANCEL</a></p>
 </body>
+
 </html>

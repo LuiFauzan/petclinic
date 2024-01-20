@@ -1,0 +1,97 @@
+ body {
+      background: var(--abu-muda);
+      color: #444;
+      font: 100%/30px 'poppins';
+      text-shadow: 0 1px 0 #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      /* border:1px solid black; */
+      display: flex;
+      background: var(--biru-muda);
+      align-items: center;
+      text-align: center;
+      justify-content: space-around;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .header img {
+      display: flex;
+      position: absolute;
+      left: 11%;
+      width: 2%;
+
+    }
+
+    .header a,
+    h1 {
+      color: white;
+      text-decoration: none;
+    }
+
+    .header1 {
+      display: block;
+      /* border: 1px solid black; */
+      justify-content: center;
+      text-align: center;
+      margin: 0 250px;
+    }
+
+    form {
+      /* border: 1px solid black; */
+      align-items: center;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      /* margin-top: 100px; */
+    }
+
+    thead {
+      background-color: var(--biru-muda);
+      color: white;
+      text-shadow: 0px 0px 2px black;
+    }
+
+.btn{
+    text-decoration: none;
+    background-color: var(--abu-muda);
+    color: var(--biru-muda);
+    padding: 5px 15px;
+    margin: 0 5px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border: 1px solid var(--biru-muda);
+    transition: 2ms;
+    -webkit-transition: 2ms;
+    -moz-transition: 2ms;
+    -ms-transition: 2ms;
+    -o-transition: 2ms;
+  }
+  .btn:hover{
+   
+    background-color: var(--biru-muda);
+    color: var(--abu-muda);
+}
+.medical{
+  box-shadow: 0px 0px 2px black;
+  /*float: inherit;
+  */display: flex;
+  text-align: start;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 220px;
+  padding: 10px;
+  background-color: var(--biru-muda);
+  color: var(--abu-muda);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
